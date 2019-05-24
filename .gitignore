@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+.idea
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+lib64
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Auto-generated documentation
+docs/src/apidocs/
+docs/src/CurrentChangelog.rst
+docs/src/RegionList.rst
+docs/gh-pages/
+docs/man/
+docs/email
+#docs/gh-pages
+.doctrees
+share/
+
+# Doctest results
+docs/doctests/
+
+*.iml
+
+# Virtualenv files
+bin/
+include/
+pip-selfcheck.json
+local/
+pyvenv.cfg
+.venv*/
+
+# mac files
+.DS_Store
+
+# User Config
+.config/
+
+/requirements.txt
+/pip_packages/
+
+# auto-generated list of files in this repo that need an SDLC review
+needs_review
+
+# pre-commit configuration yaml file
+.pre-commit-config.yaml
