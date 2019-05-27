@@ -35,7 +35,7 @@ container:  ## Build the container for deployment
 	@echo Building container...
 	docker build --pull \
 	--build-arg version="$(version)" \
-	--build-arg tarball="$(tarball)"
+	--build-arg tarball="$(tarball)" \
 	--tag lykinsbd/asa_to_fdm:$(version) \
 	--tag lykinsbd/asa_to_fdm:latest .
 

@@ -5,4 +5,4 @@
 Initialization module for asa_to_fdm. Sets version
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
