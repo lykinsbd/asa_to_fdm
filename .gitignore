@@ -68,7 +68,6 @@ pyvenv.cfg
 # User Config
 .config/
 
-/requirements.txt
 /pip_packages/
 
 # auto-generated list of files in this repo that need an SDLC review
