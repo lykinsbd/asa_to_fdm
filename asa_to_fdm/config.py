@@ -12,11 +12,7 @@ import os
 
 from asa_to_fdm.library.error_handlers import ASAUnreachable
 from flask import jsonify
-from typing import TYPE_CHECKING
-
-
-if TYPE_CHECKING:
-    from flask.app import Flask
+from flask.app import Flask
 
 
 def app_configure(app: Flask) -> None:
