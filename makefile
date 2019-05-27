@@ -24,7 +24,7 @@ distclean: clean  ## Delete anything that's not part of the repo
 .PHONY: dist
 dist:  ## Create the Tarball of this code
 	@echo Creating tarball
-	python setup.py sdist
+	python setup.py sdist bdist_wheel
 
 .PHONY: container
 container:  ## Build the container for deployment
