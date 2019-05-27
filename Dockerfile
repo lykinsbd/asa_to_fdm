@@ -17,7 +17,7 @@ LABEL name="ASA to FDM API Image" \
       version="${version}"
 
 # Put our stuff in the temp dir
-COPY ["${tarball}", "requirements.txt", "/tmp/"]
+COPY ["${tarball}", "requirements.txt", "gunicorn.py", "/tmp/"]
 
 # Install all the things, below is a full breakdown of this monster RUN command:
 
@@ -28,6 +28,8 @@ COPY ["${tarball}", "requirements.txt", "/tmp/"]
 # Install our code
 # Remove build dependencies (since it's built now)
 # Create our /app directory for things to live in
+# Move gunicorn.py into there
+# Remove our temp directory
 
 RUN apk update && apk upgrade --no-cache && \
     apk add --no-cache --virtual .build-deps build-base python3-dev libffi-dev openssl-dev && \
@@ -35,8 +37,9 @@ RUN apk update && apk upgrade --no-cache && \
     pip install --no-cache-dir --requirement /tmp/requirements.txt && \
     pip install --no-cache-dir --no-deps /tmp/$(basename ${tarball}) && \
     apk del .build-deps && \
-    rm -fr /tmp/ && \
-    mkdir /app
+    mkdir /app && \
+    mv /tmp/gunicorn.py /app/gunicorn.py && \
+    rm -fr /tmp
 
 # Make our working dir "/app"
 WORKDIR "/app"
