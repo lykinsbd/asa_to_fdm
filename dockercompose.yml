@@ -20,6 +20,6 @@ services:
     image: redis:4.0.11-alpine
   worker:
     image: lykinsbd/asa_to_fdm:latest
-    command: python3 worker.py
+    command: python3 -m asa_to_fdm.worker
     depends_on:
       - redis
