@@ -3,7 +3,7 @@ asn1crypto==0.24.0
 cffi==1.12.3
 Click==7.0
 cryptography==3.3.2
-Flask==1.0.3
+Flask==2.3.2
 Flask-RESTful==0.3.7
 gunicorn==19.9.0
 itsdangerous==1.1.0
